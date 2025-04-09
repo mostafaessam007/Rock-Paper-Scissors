@@ -1,5 +1,8 @@
 // create a function that randomly returns one of the (rock, paper or scissors) strings
-
+function getComputerChoice() {
+    return Math.floor (Math.random() * 3)
+}
+console.log(getComputerChoice());
 
 
 
