@@ -1,3 +1,19 @@
+// create a function that takes the player input
+function getHumanChoice() {
+    let Choice = prompt("Choose Rock, Paper or Scissors!");
+    Choice = Choice.toLowerCase();
+    if (Choice === "rock" || Choice === "paper" || Choice === "scissors") {
+        return Choice;
+    }
+    else  {
+        alert ("Please enter a valid choice!")
+        return null
+    }
+}
+const humanChoice = getHumanChoice();
+console.log("Human:",humanChoice);
+
+
 // create a function that randomly returns one of the (rock, paper or scissors) strings
 function getComputerChoice() {
     let randomNum= Math.floor (Math.random() * 3)
@@ -9,31 +25,37 @@ function getComputerChoice() {
         return "Scissors";
     }
 }
-console.log(getComputerChoice());
+const computerChoice = getComputerChoice();
+console.log("Computer:",computerChoice);
 
-// create a function that takes the player input
-function getHumanChoice() {
-    let Choice = prompt("Choose Rock, Paper or Scissors!");
-    Choice = Choice.toLowerCase();
-    if (Choice === "rock" || Choice === "paper" || Choice === "scissors") {
-        alert ("Right choice!")
-    }
-    else  {
-        alert ("Please enter a valid choice!")
-    }
-}
-console.log(getHumanChoice());
 
 // the computer will return a human score and computer score after every round
 let humanScore = (0)
 let computerScore = (0)
-console.log("humanScore=",humanScore,"computerScore=",computerScore);
+
 
 
 // compare the human choice to the computer choice
+function playRound(humanChoice , computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
+    if (humanChoice ===  computerChoice) {
+        alert ("It's a tie!")
+    }
+    else if ( (humanChoice === "rock" && computerChoice === "scissors" ) ||
+            ( humanChoice === "scissors" && computerChoice === "paper") ||
+            (humanChoice === "paper" && computerChoice === "rock")
+)
+{alert ("You win this round!");
+    humanScore++;
 
-
-
+} else {
+    alert("Computer wins this round!");
+    computerScore++;
+}
+}
+playRound (humanChoice, computerChoice);
+console.log("humanScore=",humanScore,"computerScore=",computerScore);
 
 
 
