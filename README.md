@@ -1,5 +1,5 @@
 # Rock-Paper-Scissors
-This my first javascript project. (8/4/2025)
+This my first javascript project. (8/4/2025).
 Finished the project on (10/4/2025), hope to get back to it soon and add a GUI.
 
 This is a simple **Rock, Paper, Scissors** game implemented in JavaScript. The game consists of 5 rounds where the player competes against the computer. In each round:
